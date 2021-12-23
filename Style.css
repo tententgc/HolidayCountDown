@@ -1,0 +1,146 @@
+
+*
+{ 
+    margin: 0; 
+    padding: 0; 
+    font-family: "Calibri", serif; 
+}
+
+body
+{
+    display :flex; 
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    background: rgb(18,14,35);
+}
+
+/* body:before {
+     content: "";
+     position: absolute; 
+     top: 30px; 
+     left: 250px; 
+     width : 50%;
+     height: 50%;
+     background :linear-gradient(rgb(208,0,128),rgb(43,223,255));
+    clip-path: polygon(100% 100% ,40% 10%, 10% 100%,40% 50%,100% 100%); 
+
+}
+body:after{
+    content: "";
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width : 100%;
+    height: 100%;
+    background :linear-gradient(rgb(255,0,242),rgb(37,204,255));
+    clip-path: polygon(22% 40% , 50% 75%, 80% 40%, 50% 100%);
+    backdrop-filter : blur(5px); 
+} */
+
+
+
+.container
+{ 
+    position : relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    max-width : 1200px ;
+    flex-wrap :wrap;
+    z-index : 1 ;
+    backdrop-filter : blur(5px); 
+}
+.container h2{
+    text-align : center; 
+    font-size: 10em;
+    line-height: 0.7em;
+    color :white;
+    margin-top: -80px;  
+}
+
+.container h2 span
+{
+     position: relative;
+     display : flex; 
+     font-weight: 400;
+     letter-spacing: 6px;
+     font-size: 0.2em;
+     backdrop-filter : blur(4px); 
+}
+.count
+{
+    display: flex;
+    margin-top: 50px;
+}
+
+.count div 
+{
+    position : relative;
+    width:100px; 
+    height : 100px; 
+    line-height : 100px; 
+    text-align : center; 
+    background-color: #333;
+    color : white;
+    margin : 0 15px;
+    font-size : 4em; 
+    font-weight :500; 
+}
+
+.count div::before{
+    content: '';
+    position: absolute; 
+    bottom : -30px ;
+    left : 0; 
+    width :100%;
+    height :50px;
+    background: #50E9FA;
+    color :#333;
+    font-size :25px; 
+    line-height : 35px;
+    font-weight:400;
+    backdrop-filter : blur(5px); 
+}
+
+.count #day:before{
+    content: 'Days'; 
+}
+.count #hour:before{
+    content: 'Hours';  
+}
+.count #minute:before{
+    content: 'Minutes';; 
+}
+.count #second:before{
+    content: 'Seconds';
+}
+
+
+
+ /* snow drop  */
+
+.snow1
+{
+    background: url(snow.png);   
+    background-repeat: repeat;
+    width: 100%;
+    height: 650px;
+    position: absolute; 
+    top: 0; 
+    left : 0; 
+    animation : animateOne 15s infinite linear;
+}
+
+@keyframes animateOne
+
+{
+    0%{
+        background-position:100% 100%;
+    }
+    100%{
+        background-position: 0% 0% ;
+    }
+}
+
+
