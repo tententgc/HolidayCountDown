@@ -120,7 +120,7 @@ body:after{
 
  /* snow drop  */
 
-.snow1
+/* .snow1
 {
     background: url(snow.png);   
     background-repeat: repeat;
@@ -142,5 +142,61 @@ body:after{
         background-position: 0% 0% ;
     }
 }
+ */
 
 
+
+     /* falling star  */
+
+section i 
+{
+    position : absolute; 
+    background: #ffff;
+    border-radius: 50%; 
+    box-shadow : 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff, 
+    0 0 80px #fff;
+    animation : animate 2s linear infinite ;
+}
+@keyframes animate
+{
+    0%{
+         opacity: 0;
+    }
+    10%{
+        opacity: 1; 
+    }
+    90%{
+        opacity: 1; 
+    }
+    100%{
+        opacity: 1; 
+    }
+}
+
+
+
+.left,
+.right {
+    float: left;
+    width: 20%;
+    /* The width is 20%, by default */
+}
+
+.main {
+    float: left;
+    width: 60%;
+    /* The width is 60%, by default */
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+
+    .left,
+    .main,
+    .right {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
