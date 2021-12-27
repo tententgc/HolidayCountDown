@@ -1,155 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
-*
-{ 
+*{
     margin: 0; 
     padding: 0; 
-    font-family: "Calibri", serif; 
+    box-sizing: border-box; 
 }
 
-body
-{
-    display :flex; 
-    justify-content: center;
-    align-items: center; 
-    min-height: 100vh;
-    background: rgb(18,14,35);
+body{
+    /* background-image : url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: top; */
+    min-height: 100vh; 
+    display: flex ; 
+    flex-direction : column; 
+    align-items :center; 
+    font-family: 'Open Sans', sans-serif; 
+    position: relative;
 }
 
-/* body:before {
-     content: "";
-     position: absolute; 
-     top: 30px; 
-     left: 250px; 
-     width : 50%;
-     height: 50%;
-     background :linear-gradient(rgb(208,0,128),rgb(43,223,255));
-    clip-path: polygon(100% 100% ,40% 10%, 10% 100%,40% 50%,100% 100%); 
-
-}
-body:after{
-    content: "";
+.overlay{
     position: absolute; 
-    top: 0; 
-    left: 0; 
-    width : 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
     height: 100%;
-    background :linear-gradient(rgb(255,0,242),rgb(37,204,255));
-    clip-path: polygon(22% 40% , 50% 75%, 80% 40%, 50% 100%);
-    backdrop-filter : blur(5px); 
-} */
+    z-index: -1;  
+}
 
+.countdown-container{
+    display : flex;
+}
+.big-text{
+    font-size : 4rem ;
+}
 
+.title
+{
+    margin : 10px; 
+    text-align : center ; 
+    color : #fff; 
+    width : 100%; 
+    letter-spacing : 2px;
+    font-size : 3rem;
+    line-height : 5.5rem;
 
-.container
-{ 
-    position : relative; 
-    display: flex;
-    justify-content: center; 
+}
+
+.title span { 
+    display : block; 
+    font-size : 6rem;
+    letter-spacing : 2rem;
+}
+
+.wrapper{
+    display : flex; 
     align-items: center;
-    max-width : 1200px ;
-    flex-wrap :wrap;
-    z-index : 1 ;
-    backdrop-filter : blur(5px); 
+    justify-content: center; 
+    flex-wrap : wrap; 
+    min-height : 100vh; 
 }
-.container h2{
+
+.countdown-container > div {
+    margin : 0 2rem;
     text-align : center; 
-    font-size: 10em;
-    line-height: 0.7em;
-    color :white;
-    margin-top: -80px;  
+    border: 2px solid #fff; 
+    padding : 0px 20px;
+    border-radius : 12px ;
+    box-shadow : 0px 2px 10px rgba(0,0,0,0.5); 
+    box-sizing : border-box; 
+    color : #fff; 
+    min-width : 150px;
+
 }
 
-.container h2 span
-{
-     position: relative;
-     display : flex; 
-     font-weight: 400;
-     letter-spacing: 6px;
-     font-size: 0.2em;
-     backdrop-filter : blur(4px); 
-}
-.count
-{
-    display: flex;
-    margin-top: 50px;
-}
-
-.count div 
-{
-    position : relative;
-    width:100px; 
-    height : 100px; 
-    line-height : 100px; 
-    text-align : center; 
-    background-color: #333;
-    color : white;
-    margin : 0 15px;
-    font-size : 4em; 
-    font-weight :500; 
-}
-
-.count div::before{
-    content: '';
-    position: absolute; 
-    bottom : -30px ;
-    left : 0; 
-    width :100%;
-    height :50px;
-    background: #50E9FA;
-    color :#333;
-    font-size :25px; 
-    line-height : 35px;
-    font-weight:400;
-    backdrop-filter : blur(5px); 
-}
-
-.count #day:before{
-    content: 'Days'; 
-}
-.count #hour:before{
-    content: 'Hours';  
-}
-.count #minute:before{
-    content: 'Minutes';; 
-}
-.count #second:before{
-    content: 'Seconds';
-}
-
-
-
-
-
-     /* falling star  */
-
-section i 
-{
-    position : absolute; 
-    background: #ffff;
-    border-radius: 50%; 
-    box-shadow : 0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #fff, 
-    0 0 80px #fff;
-    animation : animate 2s linear infinite ;
-}
-@keyframes animate
-{
-    0%{
-         opacity: 0;
-    }
-    10%{
-        opacity: 1; 
-    }
-    90%{
-        opacity: 1; 
-    }
-    100%{
-        opacity: 1; 
+@media (max-width:992px)
+{ 
+    .countdown-container > div {
+        margin: 0 1rem;
     }
 }
 
-     /* falling star  */
+@media (max-width:767px){
+    .countdown-container{
+        flex-wrap : wrap; 
+    } 
+    .countdown-container > div {
+        margin:1rem auto; 
+        max-width : 150px;
 
-/* responsive   */
+    } 
+    .title{
+        font-size : 1.5rem; 
+        line-height : 3.5rem;
+        margin: 10px 0px ;  
+    }
+    .title span{
+         font-size: 2rem;
+         letter-spacing : 1rem; 
+    }
+}
 
+/*----video background---*/
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}

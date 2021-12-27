@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Newyear 2020 Countdown</title>
-    <link rel="stylesheet" href="Style.css">
-</head>
-<body>
-    <section>
-        <div class="container">
-            <h2><span>Countdown to New Year </span>2022</h2> 
-            <div class="count">
-                <div id="day">NA</div>
-                <div id="hour">NA</div>
-                <div id="minute">NA</div>
-                <div id="second">NA</div>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+      <video id="background-video" autoplay loop muted poster="snow.mp4">
+  <source src="christmas.mp4" type="video/mp4">
+</video>
+    <div class="overlay">
+      <div class="wrapper">
+        <div class="">
+          <h1 class="title"><span>2022</span>New Year Countdown</h1>
+          <div class="countdown-container">
+            <div>
+              <p id="days" class="big-text">0</p>
+              <span>Days</span>
             </div>
+            <div>
+              <p id="hours" class="big-text">0</p>
+              <span>Hours</span>
+            </div>
+            <div>
+              <p id="min" class="big-text">0</p>
+              <span>Min</span>
+            </div>
+            <div>
+              <p id="second" class="big-text">0</p>
+              <span>Sec</span>
+            </div>
+          </div>
         </div>
-    </section> 
-    <audio autoplay>
-  <source src="countdown.mp3" type="audio/ogg" z-index="2">
-    </audio>
-<script src="Script.js"></script> 
-</body>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
