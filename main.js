@@ -1,16 +1,9 @@
-// import { HolidayAPI } from 'holidayapi';
-// const key = '611aa967-a0ee-4f61-8935-1a6929c62457'
-// const holidayApi = new HolidayAPI({ key });
-// holidayApi.holidays({
-//     country: 'TH',
-//     year: '2022',
-// });
-// console.log(holidayApi)
 
 
 
 
-let countDownDate = new Date("Jan 24, 2022 00:00:00").getTime(); 
+
+let countDownDate = new Date("Feb 14, 2022 00:00:00").getTime(); 
 function newyear(){
     let now = new Date().getTime(); 
     gap = countDownDate - now; 
