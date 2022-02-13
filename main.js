@@ -3,7 +3,7 @@
 
 
 
-let countDownDate = new Date("Feb 14, 2022 00:00:00").getTime(); 
+let countDownDate = new Date("Feb 17, 2022 09:30:00").getTime(); 
 function newyear(){
     let now = new Date().getTime(); 
     gap = countDownDate - now; 
